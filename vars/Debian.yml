@@ -1,7 +1,8 @@
 ---
 
 libvirt_packages:
-  - libvirt-bin
+  - libvirt-clients
+  - libvirt-daemon-system
 
 libvirt_services:
   - libvirtd

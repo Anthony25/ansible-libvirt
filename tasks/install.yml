@@ -1,13 +1,10 @@
 ---
-# tasks file for libvirt (Ubuntu specific)
 
 - name: Install libvirt packages
-  become: yes
-  apt:
+  package:
     name: "{{ item }}"
     state: present
-    update_cache: yes
   with_items:
     - "{{ libvirt_packages }}"
-  tags:
-    - libvirt
+
+# vim: set ts=2 sw=2:

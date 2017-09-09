@@ -1,23 +1,11 @@
 ---
-# tasks file for libvirt
 
-- name: Include distribution specific variables
-  include_vars: "{{ ansible_distribution }}.yml"
-  tags:
-    - libvirt
 
-- include: CentOS.yml
-  when: ansible_distribution == "CentOS"
-  tags:
-    - libvirt
+- include: dist_vars.yml
 
-- include: Ubuntu.yml
-  when: ansible_distribution == "Ubuntu"
-  tags:
-    - libvirt
+- include: install.yml
 
 - name: Create libvirt.conf configuration file
-  become: yes
   template:
     src: libvirt.conf.j2
     dest: /etc/libvirt/libvirt.conf
@@ -26,11 +14,8 @@
     mode: 0644
   notify:
     - reload libvirt
-  tags:
-    - libvirt
 
 - name: Create libvirtd.conf configuration file
-  become: yes
   template:
     src: libvirtd.conf.j2
     dest: /etc/libvirt/libvirtd.conf
@@ -39,11 +24,8 @@
     mode: 0644
   notify:
     - reload libvirt
-  tags:
-    - libvirt
 
 - name: Create lxc.conf configuration file
-  become: yes
   template:
     src: lxc.conf.j2
     dest: /etc/libvirt/lxc.conf
@@ -52,11 +34,8 @@
     mode: 0644
   notify:
     - reload libvirt
-  tags:
-    - libvirt
 
 - name: Create qemu.conf configuration file
-  become: yes
   template:
     src: qemu.conf.j2
     dest: /etc/libvirt/qemu.conf
@@ -65,11 +44,8 @@
     mode: 0600
   notify:
     - reload libvirt
-  tags:
-    - libvirt
 
 - name: Create qemu-lockd.conf configuration file
-  become: yes
   template:
     src: qemu-lockd.conf.j2
     dest: /etc/libvirt/qemu-lockd.conf
@@ -78,11 +54,8 @@
     mode: 0644
   notify:
     - reload libvirt
-  tags:
-    - libvirt
 
 - name: Create virtlockd.conf configuration file
-  become: yes
   template:
     src: virtlockd.conf.j2
     dest: /etc/libvirt/virtlockd.conf
@@ -91,11 +64,8 @@
     mode: 0644
   notify:
     - reload libvirt
-  tags:
-    - libvirt
 
 - name: Create virt-login-shell.conf configuration file
-  become: yes
   template:
     src: virt-login-shell.conf.j2
     dest: /etc/libvirt/virt-login-shell.conf
@@ -104,14 +74,12 @@
     mode: 0644
   notify:
     - reload libvirt
-  tags:
-    - libvirt
 
 - name: Ensure libvirt service is started and enabled on boot
-  become: yes
   service:
-    name: "{{ libvirt_service_name }}"
+    name: "{{ item }}"
     state: started
-    enabled: yes
-  tags:
-    - libvirt
+    enabled: true
+  with_items: "{{ libvirt_services }}"
+
+# vim: set ts=2 sw=2:
