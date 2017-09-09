@@ -2,6 +2,7 @@
 
 libvirt_packages:
   - libvirt
+  - qemu
 
 libvirt_services:
   - libvirtd

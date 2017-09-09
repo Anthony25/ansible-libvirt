@@ -1,7 +1,7 @@
 libvirt
 =======
 
-[![Build Status](https://travis-ci.org/kbrebanov/ansible-libvirt.svg?branch=master)](https://travis-ci.org/kbrebanov/ansible-libvirt)
+[![Build Status](https://travis-ci.org/Anthony25/ansible-role-libvirt.svg?branch=master)](https://travis-ci.org/Anthony25/ansible-role-libvirt)
 
 Installs and configures libvirt
 
@@ -112,3 +112,4 @@ Author Information
 ------------------
 
 Kevin Brebanov
+Anthony Ruhier

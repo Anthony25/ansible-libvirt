@@ -4,15 +4,13 @@
 - name: restart libvirt
   become: yes
   service:
-    name: "{{ libvirt_service_name }}"
+    name: "{{ libvirt_services[0] }}"
     state: restarted
-  tags:
-    - libvirt
+  when: libvirt_services
 
 - name: reload libvirt
   become: yes
   service:
-    name: "{{ libvirt_service_name }}"
+    name: "{{ libvirt_services[0] }}"
     state: reloaded
-  tags:
-    - libvirt
+  when: libvirt_services

@@ -1,5 +1,9 @@
 ---
-# vars file for libvirt (Ubuntu specific)
 
 libvirt_packages:
   - libvirt-bin
+
+libvirt_services:
+  - libvirt-bin
+
+# vim: set ts=2 sw=2:
