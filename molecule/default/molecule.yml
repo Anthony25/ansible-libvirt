@@ -26,6 +26,8 @@ platforms:
     image_version: full
     command: /lib/systemd/systemd
     privileged: true
+    groups:
+      - no_libvirt_service
   - name: ansible-centos
     image: centos
     image_version: latest
