@@ -209,8 +209,12 @@ remote_websocket_port_max = {{ libvirt_qemu_remote_websocket_port_max }}
 # value of security_driver cannot contain "dac".  The value "none" is
 # a special value; security_driver can be set to that value in
 # isolation, but it cannot appear in a list of drivers.
-#
+
+{% if libvirt_qemu_security_driver %}
 security_driver = "{{ libvirt_qemu_security_driver }}"
+{% else %}
+security_driver = []
+{% endif %}
 
 # If set to non-zero, then the default security labeling
 # will make guests confined. If set to zero, then guests

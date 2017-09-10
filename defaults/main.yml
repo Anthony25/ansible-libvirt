@@ -10,7 +10,7 @@ libvirt_libvirtd_mdns_adv: 0
 libvirt_libvirtd_mdns_name: "Virtualization Host {{ ansible_hostname }}"
 
 libvirt_lxc_log_with_libvirtd: 0
-libvirt_lxc_security_driver: selinux
+libvirt_lxc_security_driver:
 libvirt_lxc_security_default_confined: 0
 libvirt_lxc_security_require_confined: 0
 
@@ -35,7 +35,7 @@ libvirt_qemu_remote_display_port_min: 5900
 libvirt_qemu_remote_display_port_max: 65535
 libvirt_qemu_remote_websocket_port_min: 5700
 libvirt_qemu_remote_websocket_port_max: 65535
-libvirt_qemu_security_driver: selinux
+libvirt_qemu_security_driver:
 libvirt_qemu_security_default_confined: 1
 libvirt_qemu_security_require_confined: 0
 libvirt_qemu_user: root

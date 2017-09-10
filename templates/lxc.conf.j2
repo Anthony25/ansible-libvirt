@@ -21,7 +21,11 @@ log_with_libvirtd = {{ libvirt_lxc_log_with_libvirtd }}
 # leaving SELinux enabled for the host in general, then set this
 # to 'none' instead.
 #
+{% if libvirt_lxc_security_driver %}
 security_driver = "{{ libvirt_lxc_security_driver }}"
+{% else %}
+security_driver = "none"
+{% endif %}
 
 # If set to non-zero, then the default security labeling
 # will make guests confined. If set to zero, then guests
