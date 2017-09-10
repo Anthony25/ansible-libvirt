@@ -18,7 +18,7 @@ libvirt_qemu_vnc_listen: 127.0.0.1
 libvirt_qemu_vnc_tls: 0
 libvirt_qemu_vnc_tls_x509_cert_dir: /etc/pki/libvirt-vnc
 libvirt_qemu_vnc_tls_x509_verify: 0
-libvirt_qemu_vnc_password_enabled: False
+libvirt_qemu_vnc_password_enabled: false
 libvirt_qemu_vnc_password: password
 libvirt_qemu_vnc_sasl: 0
 libvirt_qemu_vnc_sasl_dir: /etc/sasl2
@@ -26,7 +26,7 @@ libvirt_qemu_vnc_allow_host_audio: 0
 libvirt_qemu_spice_listen: 127.0.0.1
 libvirt_qemu_spice_tls: 0
 libvirt_qemu_spice_tls_x509_cert_dir: /etc/pki/libvirt-spice
-libvirt_qemu_spice_password_enabled: False
+libvirt_qemu_spice_password_enabled: false
 libvirt_qemu_spice_password: password
 libvirt_qemu_spice_sasl: 0
 libvirt_qemu_spice_sasl_dir: /etc/sasl2
@@ -66,16 +66,16 @@ libvirt_qemu_snapshot_image_format: raw
 libvirt_qemu_auto_dump_path: /var/lib/libvirt/qemu/dump
 libvirt_qemu_auto_dump_bypass_cache: 0
 libvirt_qemu_auto_start_bypass_cache: 0
-libvirt_qemu_hugetlbfs_mount_enabled: False
+libvirt_qemu_hugetlbfs_mount_enabled: false
 libvirt_qemu_hugetlbfs_mount: /dev/hugepages
-libvirt_qemu_bridge_helper_enabled: False
+libvirt_qemu_bridge_helper_enabled: false
 libvirt_qemu_bridge_helper: /usr/libexec/qemu-bridge-helper
 libvirt_qemu_clear_emulator_capabilities: 1
 libvirt_qemu_set_process_name: 0
 libvirt_qemu_mac_filter: 0
 libvirt_qemu_relaxed_acs_check: 0
 libvirt_qemu_allow_disk_format_probing: 0
-libvirt_qemu_lock_manager_sanlock_enabled: False
+libvirt_qemu_lock_manager_sanlock_enabled: false
 libvirt_qemu_max_queued: 0
 libvirt_qemu_keepalive_interval: -1
 libvirt_qemu_keepalive_count: 0

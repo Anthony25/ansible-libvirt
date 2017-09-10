@@ -2,14 +2,12 @@
 # handlers file for libvirt
 
 - name: restart libvirt
-  become: yes
   service:
     name: "{{ libvirt_services[0] }}"
     state: restarted
   when: libvirt_services
 
 - name: reload libvirt
-  become: yes
   service:
     name: "{{ libvirt_services[0] }}"
     state: reloaded
