@@ -398,8 +398,12 @@ set_process_name = {{ libvirt_qemu_set_process_name }}
 # The same applies to max_files which sets the limit on the maximum
 # number of opened files.
 #
+{% if libvirt_qemu_max_processes is defined %}
 max_processes = {{ libvirt_qemu_max_processes }}
+{% endif %}
+{% if libvirt_qemu_max_files is defined %}
 max_files = {{ libvirt_qemu_max_files }}
+{% endif %}
 
 
 

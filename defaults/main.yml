@@ -72,8 +72,6 @@ libvirt_qemu_bridge_helper_enabled: False
 libvirt_qemu_bridge_helper: /usr/libexec/qemu-bridge-helper
 libvirt_qemu_clear_emulator_capabilities: 1
 libvirt_qemu_set_process_name: 0
-libvirt_qemu_max_processes: -1
-libvirt_qemu_max_files: -1
 libvirt_qemu_mac_filter: 0
 libvirt_qemu_relaxed_acs_check: 0
 libvirt_qemu_allow_disk_format_probing: 0
