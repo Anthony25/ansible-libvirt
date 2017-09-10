@@ -1,2 +1,5 @@
 ---
+
+libvirt_libvirtd_group: libvirtd
+
 # vars file for libvirt

@@ -7,4 +7,6 @@ libvirt_packages:
 libvirt_services:
   - libvirtd
 
+libvirt_libvirtd_group: "libvirtd"
+
 # vim: set ts=2 sw=2:
