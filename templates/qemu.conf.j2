@@ -45,7 +45,9 @@ vnc_tls = {{ libvirt_qemu_vnc_tls }}
 #
 # This option allows the certificate directory to be changed
 #
+{% if libvirt_qemu_vnc_tls_x509_cert_dir %}
 vnc_tls_x509_cert_dir = "{{ libvirt_qemu_vnc_tls_x509_cert_dir }}"
+{% endif %}
 
 
 # The default TLS configuration only uses certificates for the server
@@ -133,7 +135,9 @@ spice_tls = {{ libvirt_qemu_spice_tls }}
 #
 # This option allows the certificate directory to be changed.
 #
+{% if libvirt_qemu_spice_tls_x509_cert_dir %}
 spice_tls_x509_cert_dir = "{{ libvirt_qemu_spice_tls_x509_cert_dir }}"
+{% endif %}
 
 
 # The default SPICE password. This parameter is only used if the

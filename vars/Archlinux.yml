@@ -8,5 +8,7 @@ libvirt_services:
   - libvirtd
 
 libvirt_libvirtd_group: "libvirt"
+libvirt_qemu_vnc_tls_x509_cert_dir:
+libvirt_qemu_spice_tls_x509_cert_dir:
 
 # vim: set ts=2 sw=2:
