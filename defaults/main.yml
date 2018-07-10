@@ -8,6 +8,8 @@ libvirt_libvirtd_tcp_port: 0
 libvirt_libvirtd_listen_addr: 0.0.0.0
 libvirt_libvirtd_mdns_adv: 0
 libvirt_libvirtd_mdns_name: "Virtualization Host {{ ansible_hostname }}"
+libvirt_libvirtd_unix_sock_ro_perms: 0777
+libvirt_libvirtd_unix_sock_rw_perms: 0770
 
 libvirt_lxc_log_with_libvirtd: 0
 libvirt_lxc_security_driver:
