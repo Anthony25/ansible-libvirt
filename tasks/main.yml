@@ -43,7 +43,7 @@
     group: root
     mode: 0600
   notify:
-    - reload libvirt
+    - restart libvirt
 
 - name: Create qemu-lockd.conf configuration file
   template:
