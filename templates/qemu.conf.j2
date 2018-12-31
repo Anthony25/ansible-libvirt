@@ -60,7 +60,9 @@ vnc_tls_x509_cert_dir = "{{ libvirt_qemu_vnc_tls_x509_cert_dir }}"
 # Enabling this option will reject any client who does not have a
 # certificate signed by the CA in /etc/pki/libvirt-vnc/ca-cert.pem
 #
+{% if libvirt_qemu_vnc_tls_x509_verify %}
 vnc_tls_x509_verify = {{ libvirt_qemu_vnc_tls_x509_verify }}
+{% endif %}
 
 
 # The default VNC password. Only 8 bytes are significant for
@@ -93,7 +95,9 @@ vnc_sasl = {{ libvirt_qemu_vnc_sasl }}
 # override the configs in this location. Set this parameter to
 # point to the directory, and create a qemu.conf in that location
 #
+{% if libvirt_qemu_vnc_sasl_dir %}
 vnc_sasl_dir = "{{ libvirt_qemu_vnc_sasl_dir }}"
+{% endif %}
 
 
 # QEMU implements an extension for providing audio over a VNC connection,

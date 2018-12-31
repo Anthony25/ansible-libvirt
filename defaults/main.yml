@@ -18,7 +18,7 @@ libvirt_lxc_security_require_confined: 0
 
 libvirt_qemu_vnc_listen: 127.0.0.1
 libvirt_qemu_vnc_tls: 0
-libvirt_qemu_vnc_tls_x509_cert_dir: /etc/pki/libvirt-vnc
+libvirt_qemu_vnc_tls_x509_cert_dir:
 libvirt_qemu_vnc_tls_x509_verify: 0
 libvirt_qemu_vnc_password_enabled: false
 libvirt_qemu_vnc_password: password
@@ -27,7 +27,7 @@ libvirt_qemu_vnc_sasl_dir: /etc/sasl2
 libvirt_qemu_vnc_allow_host_audio: 0
 libvirt_qemu_spice_listen: 127.0.0.1
 libvirt_qemu_spice_tls: 0
-libvirt_qemu_spice_tls_x509_cert_dir: /etc/pki/libvirt-spice
+libvirt_qemu_spice_tls_x509_cert_dir:
 libvirt_qemu_spice_password_enabled: false
 libvirt_qemu_spice_password: password
 libvirt_qemu_spice_sasl: 0
