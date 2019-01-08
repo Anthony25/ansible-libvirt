@@ -93,14 +93,14 @@ Install libvirt
 ```
 - hosts: all
   roles:
-    - { role: kbrebanov.libvirt }
+    - { role: anthony25.libvirt }
 ```
 
 Install libvirt and set VNC to listen on all addresses
 ```
 - hosts: all
   roles:
-    - { role: kbrebanov.libvirt, libvirt_qemu_vnc_listen: 0.0.0.0 }
+    - { role: anthony25.libvirt, libvirt_qemu_vnc_listen: 0.0.0.0 }
 ```
 
 License
@@ -111,5 +111,5 @@ BSD
 Author Information
 ------------------
 
-Kevin Brebanov
-Anthony Ruhier
+* Kevin Brebanov
+* Anthony Ruhier
