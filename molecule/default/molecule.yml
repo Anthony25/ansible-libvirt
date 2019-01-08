@@ -18,8 +18,6 @@ platforms:
       - no_libvirt_service
   - name: ansible-ubuntu-1804
     image: ubuntu:18.04
-    groups:
-      - no_libvirt_service
   - name: ansible-ubuntu-1810
     image: ubuntu:18.10
     groups:
