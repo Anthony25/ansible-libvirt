@@ -12,12 +12,15 @@ provisioner:
         libvirt_services: []
 
 platforms:
-  - name: ansible-ubuntu-lts
+  - name: ansible-ubuntu-1604
     image: ubuntu
     image_version: '16.04'
-  - name: ansible-ubuntu-1704
+  - name: ansible-ubuntu-1804
     image: ubuntu
-    image_version: '17.04'
+    image_version: '18.04'
+  - name: ansible-ubuntu-1810
+    image: ubuntu
+    image_version: '18.10'
   - name: ansible-debian
     image: debian
     image_version: 'latest'
