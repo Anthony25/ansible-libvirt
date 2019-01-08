@@ -4,7 +4,7 @@ libvirt_packages:
   - libvirt-bin
 
 libvirt_services:
-  - libvirt-bin
+  - libvirtd
 
 libvirt_libvirtd_group: "libvirtd"
 
