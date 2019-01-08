@@ -15,12 +15,18 @@ platforms:
   - name: ansible-ubuntu-1604
     image: ubuntu
     image_version: '16.04'
+    groups:
+      - no_libvirt_service
   - name: ansible-ubuntu-1804
     image: ubuntu
     image_version: '18.04'
+    groups:
+      - no_libvirt_service
   - name: ansible-ubuntu-1810
     image: ubuntu
     image_version: '18.10'
+    groups:
+      - no_libvirt_service
   - name: ansible-debian
     image: debian
     image_version: 'latest'
