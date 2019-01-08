@@ -1,0 +1,12 @@
+---
+
+libvirt_packages:
+  - libvirt-daemon-system
+  - libvirt-clients
+
+libvirt_services:
+  - libvirtd
+
+libvirt_libvirtd_group: "libvirtd"
+
+# vim: set ts=2 sw=2:
